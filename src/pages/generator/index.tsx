@@ -102,7 +102,7 @@ export const Generator = () => {
                 </Button>
               )}
               <Button colorScheme="green" onClick={onGenerateMnemonic}>
-                Generate Mnemonic
+                Generate New Mnemonic
               </Button>
             </HStack>
           </VStack>
