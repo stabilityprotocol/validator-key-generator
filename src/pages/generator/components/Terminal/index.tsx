@@ -23,6 +23,7 @@ export const Terminal: React.FC<{ mnemonic: string }> = ({ mnemonic }) => {
       <Box>SS58 Address: {detail.address}</Box>
       <Box>Private Key: {detail.privateKey}</Box>
       <Box>Public Key: {detail.publicKey}</Box>
+      <Box>SS58 Public Key: {detail.ss58PublicKey}</Box>
       <Box>Mnemonic: {mnemonic}</Box>
     </Box>
   );

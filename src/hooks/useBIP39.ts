@@ -1,4 +1,4 @@
-import Keyring from "@polkadot/keyring";
+import Keyring, { encodeAddress } from "@polkadot/keyring";
 import {
   mnemonicGenerate,
   mnemonicValidate,
@@ -25,11 +25,13 @@ export const useBIP39 = () => {
     const hexPublicKey = u8aToHex(publicKey);
     const hexSecretKey = u8aToHex(secretKey);
     const ethAddress = ethers.computeAddress(hexPublicKey);
+    const ss58PublicKey = encodeAddress(hexPublicKey, 42);
     return {
       address,
       publicKey: hexPublicKey,
       privateKey: hexSecretKey,
       ethAddress,
+      ss58PublicKey,
     };
   };
 
